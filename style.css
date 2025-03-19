@@ -1,0 +1,111 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ffebf3;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Arial', sans-serif;
+    color: #ff1493;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    margin-bottom: 40px;
+}
+
+.flower {
+    position: relative;
+    width: 200px;
+    height: 300px;
+    margin: 0 auto;
+}
+
+.center {
+    position: absolute;
+    top: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 40px;
+    background: #800000;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.petals {
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.petal {
+    position: absolute;
+    width: 50px;
+    height: 60px;
+    background: #ff0000;
+    border-radius: 50% 50% 0 50%;
+    transform-origin: bottom right;
+}
+
+.petal:nth-child(1) { transform: rotate(0deg) translateX(20px); }
+.petal:nth-child(2) { transform: rotate(30deg) translateX(20px); }
+.petal:nth-child(3) { transform: rotate(60deg) translateX(20px); }
+.petal:nth-child(4) { transform: rotate(90deg) translateX(20px); }
+.petal:nth-child(5) { transform: rotate(120deg) translateX(20px); }
+.petal:nth-child(6) { transform: rotate(150deg) translateX(20px); }
+.petal:nth-child(7) { transform: rotate(180deg) translateX(20px); }
+.petal:nth-child(8) { transform: rotate(210deg) translateX(20px); }
+.petal:nth-child(9) { transform: rotate(240deg) translateX(20px); }
+.petal:nth-child(10) { transform: rotate(270deg) translateX(20px); }
+.petal:nth-child(11) { transform: rotate(300deg) translateX(20px); }
+.petal:nth-child(12) { transform: rotate(330deg) translateX(20px); }
+
+.stem {
+    position: absolute;
+    top: 150px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 8px;
+    height: 150px;
+    background: #228B22;
+}
+
+.leaves {
+    position: absolute;
+    top: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.leaf {
+    position: absolute;
+    width: 30px;
+    height: 40px;
+    background: #228B22;
+    border-radius: 0 50% 0 50%;
+}
+
+.leaf:first-child {
+    transform: translateX(-30px) rotate(-30deg);
+}
+
+.leaf:last-child {
+    transform: translateX(10px) rotate(30deg);
+}
+
+@keyframes sway {
+    0% { transform: rotate(0deg); }
+    50% { transform: rotate(5deg); }
+    100% { transform: rotate(0deg); }
+}
+
+.flower {
+    animation: sway 3s ease-in-out infinite;
+    transform-origin: bottom center;
+}
